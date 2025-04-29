@@ -17,6 +17,16 @@ function F.toggle_tabs()
     end
     visibleTabs = not visibleTabs
 end
-
+-- toggle menu bar
+local visibleMenubar = true
+local menubar = textadept.menu.menubar
+function F.toggle_menubar()
+    if visibleMenubar then
+        textadept.menu.menubar = nil
+    else
+        textadept.menu.menubar = menubar
+    end
+    visibleMenubar = not visibleMenubar
+end
 
 return F
